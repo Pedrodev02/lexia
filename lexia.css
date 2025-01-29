@@ -1,0 +1,123 @@
+/* CSS */
+body {
+    margin: 0;
+    padding: 0;
+    background: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.intro-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: #121212;
+    animation: fade-in 2s;
+    text-align: center;
+}
+
+.texto-intro {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.foto-intro {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    object-fit: cover;
+}
+
+.fade-out {
+    animation: fade-out 1s forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.quiz {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+.pergunta {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: calc(100% - 22px);
+    border: 1px solid #333;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 10px;
+    background: #2b2b2b;
+    color: white;
+}
+
+button {
+    background-color: #ff6f91;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff3b6f;
+}
+
+.mensagem {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.coracao {
+    position: absolute;
+    font-size: 24px;
+    color: red;
+    animation: subir 2s ease-out forwards;
+}
+
+@keyframes subir {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
